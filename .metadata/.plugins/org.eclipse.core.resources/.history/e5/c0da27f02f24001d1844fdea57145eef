@@ -1,6 +1,0 @@
-package org.zerock.sample;
-
-@RunWith()
-public class SampleTest {
-
-}

@@ -93,44 +93,51 @@ public class SampleController {
 	
 	@GetMapping("/ex04")
 	public String ex04(SampleDTO dto, @ModelAttribute("page") int page) {
-		log.info("dto: " + dto);
+		log.info("dto :" + dto);
 		log.info("page: " + page);
 		
 		return "/sample/ex04";
 	}
 	
+	@GetMapping("/ex05")
+	public void ex05() {
+		log.info("/ex05.............");
+	}
+	
 	@GetMapping("/ex06")
 	public @ResponseBody SampleDTO ex06() {
-		log.info("ex-6............");
+		log.info("/ex06..............");
+		
 		SampleDTO dto = new SampleDTO();
 		dto.setAge(10);
-		dto.setName("jgm");
+		dto.setName("홍길동");
+		
 		return dto;
 	}
 	
 	@GetMapping("/ex07")
 	public ResponseEntity<String> ex07(){
-		log.info("ex07..............");
+		log.info("/ex07...........");
 		
 		String msg = "{\"name\": \"홍길동\"}";
 		
 		HttpHeaders header = new HttpHeaders();
-		header.add("Content-type", "application/json;charset=UTF-8");
+		header.add("Content-Type", "application/json;charset=UTF-8");
 		
 		return new ResponseEntity<String>(msg, header, HttpStatus.OK);
 	}
 	
 	@GetMapping("/exUpload")
 	public void exUpload() {
-		log.info("/exUpload....................");
+		log.info("/exUpload...............");
 	}
 	
 	@PostMapping("/exUploadPost")
 	public void exUploadPost(ArrayList<MultipartFile> files) {
-		files.forEach(file -> {
+		files.forEach(file ->{
 			log.info("-------------------------------");
-			log.info("name:" + file.getOriginalFilename());
-			log.info("size:" + file.getSize());
+			log.info("name: " + file.getOriginalFilename());
+			log.info("size: " + file.getSize());
 		});
 	}
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <temp-directories>
+  <temp-directory age="0" key="실습 서버" path="tmp3" recycle="false"/>
   <temp-directory age="0" key="apache-tomcat-9.0.46 at localhost" path="tmp0" recycle="false"/>
   <temp-directory age="0" key="ex001" path="tmp2" recycle="false"/>
+  <temp-directory age="0" key="ex04" path="tmp4" recycle="false"/>
   <temp-directory age="0" key="ex01" path="tmp1" recycle="false"/>
 </temp-directories>
