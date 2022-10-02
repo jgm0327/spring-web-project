@@ -60,6 +60,7 @@ public class BoardSerivceImpl implements BoardService{
 	@Override
 	public boolean remove(Long bno) {
 		log.info("remove........." + bno);
+		attachMapper.deleteAll(bno);
 		return mapper.delete(bno) == 1;
 	}
 
