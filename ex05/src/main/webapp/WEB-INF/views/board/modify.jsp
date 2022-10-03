@@ -152,7 +152,24 @@
 				formObj.append(amountTag);
 				formObj.append(typeTag);
 				formObj.append(keywordTag);
+			}else if(operation === 'modify'){
+				console.log("submit clicked");
+				
+				var str="";
+				
+				$(".uploadResult ul li").each(function(i, obj){
+					var jobj = $(obj);
+					
+					console.log(jobj);
+					
+					str += "<input type='hidden' name='attachList["+i+"].fileName' value='" + jobj.data("filename")+"'>";
+					str += "<input type='hidden' name='attachList["+i+"].uuid' value='" + jobj.data("uuid")+"'>";
+					str += "<input type='hidden' name='attachList["+i+"].uploadPath' value='" + jobj.data("path")+"'>";
+					str += "<input type='hidden' name='attachList["+i+"].fileType' value='" + jobj.data("type")+"'>";
+				});
+				formObj.append(str).submit();
 			}
+			formObj.submit();
 			formObj.submit();
 		});
 	
@@ -287,5 +304,6 @@
 		
 		uploadUL.append(str);
 	}
+	
 </script>
 <%@include file="../includes/footer.jsp" %>
