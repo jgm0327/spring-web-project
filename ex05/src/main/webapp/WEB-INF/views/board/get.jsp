@@ -52,11 +52,6 @@
 	<!-- end panel-body -->
 </div>
 
-<div class='bigPictureWrapper'>
-	<div class='bigPicture'>
-	</div>
-</div>
-
 <style>
 	.uploadResult{
 		width:100%;
@@ -103,6 +98,11 @@
 		width: 100px;
 	}
 </style>
+
+<div class='bigPictureWrapper'>
+	<div class='bigPicture'>
+	</div>
+</div>
 
 <div class="row">
 	<div class="col-lg-12">
@@ -237,9 +237,9 @@
 		alert("수정 완료....");
 	}) */ 
 
-	replyService.get(10, function(data) {
+	/* replyService.get(10, function(data) {
 		console.log(data);
-	});
+	}); */
 </script>
 
 <script>

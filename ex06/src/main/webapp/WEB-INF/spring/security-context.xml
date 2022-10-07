@@ -8,25 +8,29 @@
 	<bean id="customAccessDenied" class="org.zerock.security.CustomAccessDeniedHandler"></bean>
 	<bean id="customAccessSuccess" class="org.zerock.security.CustomLoginSuccessHandler"></bean>
 	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
-	
+	<bean id="customUserDetailsService" class="org.zerock.security.CustomUserDetailService"></bean>
 	
 	<security:http>
 		<security:intercept-url pattern="/sample/all" access="permitAll"/>
 		<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
 		<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>
 		
-		<security:logout logout-url="/customLogout" invalidate-session="true"/>
+		<security:access-denied-handler ref="customAccessDenied"/>
 		
 		<!-- <security:form-login/> -->
 		<security:form-login login-page="/customLogin" authentication-success-handler-ref="customAccessSuccess"/>
 		
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
+		
+		<security:logout logout-url="/customLogout" invalidate-session="true"
+		delete-cookies="remember-me, JSESSION_ID"/>
 		<!-- <security:access-denied-handler error-page="/accessError"/> -->
-		<security:access-denied-handler ref="customAccessDenied"/>
 	</security:http>
 	
 	<security:authentication-manager>
-		<security:authentication-provider>
-			<security:jdbc-user-service data-source-ref="dataSource"/>
+		<security:authentication-provider user-service-ref="customUserDetailsService">
+			<!-- <security:jdbc-user-service data-source-ref="dataSource"/> -->
+			
 			<security:password-encoder ref="bcryptPasswordEncoder"/>
 		</security:authentication-provider>
 	</security:authentication-manager>
