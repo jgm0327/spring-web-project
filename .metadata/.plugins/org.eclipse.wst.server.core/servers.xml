@@ -16,4 +16,13 @@
   <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/ex04-config" deployDir="wtpwebapps" hostname="localhost" id="ex04" name="ex04" runtime-id="apache-tomcat-9.0.46" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
     <list key="modules" value0="ex04::org.eclipse.jst.jee.server:ex04::jst.web::2.5"/>
   </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/ex06-config" deployDir="wtpwebapps" hostname="localhost" id="ex06" name="ex06" runtime-id="apache-tomcat-9.0.46" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="ex06::org.eclipse.jst.jee.server:ex06::jst.web::2.5"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/jex06-config" deployDir="wtpwebapps" hostname="localhost" id="jex06" name="jex06" runtime-id="apache-tomcat-9.0.46" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="jex06::org.eclipse.jst.jee.server:jex06::jst.web::2.5"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/ex06_2-config" deployDir="wtpwebapps" hostname="localhost" id="ex06_2" name="ex06_2" runtime-id="apache-tomcat-9.0.46" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="ex06_2::org.eclipse.jst.jee.server:ex06_2::jst.web::3.1"/>
+  </server>
 </servers>

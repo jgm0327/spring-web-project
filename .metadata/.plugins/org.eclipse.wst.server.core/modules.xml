@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
+  <module moduleId="org.eclipse.jst.jee.server:ex06" serverId="ex06"/>
+  <module moduleId="org.eclipse.jst.jee.server:jex06" serverId="jex06"/>
   <module moduleId="org.eclipse.jst.jee.server:ex01" serverId="ex001"/>
   <module moduleId="org.eclipse.jst.jee.server:ex00" serverId="apache-tomcat-9.0.46 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:ex06_2" serverId="ex06_2"/>
 </modules>
