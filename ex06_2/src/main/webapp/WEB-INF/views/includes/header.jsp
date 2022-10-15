@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <head>
 
     <meta charset="utf-8">
@@ -73,6 +74,15 @@
                             </a>
                         </li>
                         <li class="divider"></li>
+                        <sec:authorize access="isAuthenticated()">
+                        	<li><a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i>
+                        	Logout</a></li>
+                        </sec:authorize>
+                        
+                        <sec:authorize access="isAnonymous()">
+                        	<li><a href="customLogin"><i class="fa fa-sign-out fa-fw"></i>
+                        	Login</a></li>
+                        </sec:authorize>
                         <li>
                             <a href="#">
                                 <div>
