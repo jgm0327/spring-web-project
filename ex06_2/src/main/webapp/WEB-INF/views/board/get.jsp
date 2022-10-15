@@ -134,7 +134,9 @@
 			-->
 			<div class="panel-heading">
 				<i class="fa fa-comments fa-fw"></i>Reply
+				<sec:authorize access="isAuthenticated()">
 				<button id='addReplyBtn' class='btn btn-primary btn-xs pull-right'>New Reply</button>
+				</sec:authorize>
 			</div>
 			<div class="panel-body">
 				<ul class="chat">
